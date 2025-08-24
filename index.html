@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>MUDDESRKHAN | Portfolio</title><img src="profile.jpg" alt="Muddesr Khan">
+  <style>
+    /* Reset + Fonts */
+    * {margin:0;padding:0;box-sizing:border-box;}
+    body {
+      font-family: 'Poppins', sans-serif;
+      background: #0f172a;
+      color: #f1f5f9;
+      line-height: 1.6;
+    }
+
+    /* Header */
+    header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: linear-gradient(135deg, #0f172a, #1e293b);
+      text-align: center;
+    }
+    header img {
+      width: 160px;
+      height: 160px;
+      border-radius: 50%;
+      border: 4px solid #22d3ee;
+      box-shadow: 0 0 25px #22d3ee;
+      animation: float 3s ease-in-out infinite;
+    }
+    @keyframes float {
+      0%,100% {transform: translateY(0);}
+      50% {transform: translateY(-12px);}
+    }
+    header h1 {
+      margin-top: 1rem;
+      font-size: 3rem;
+      color: #22d3ee;
+      animation: fadeIn 2s ease-in-out;
+    }
+    header p {
+      font-size: 1.2rem;
+      color: #94a3b8;
+    }
+    @keyframes fadeIn {
+      from {opacity:0; transform: translateY(20px);}
+      to {opacity:1; transform: translateY(0);}
+    }
+
+    /* Navigation */
+    nav {
+      position: sticky;
+      top: 0;
+      background: #1e293b;
+      padding: 1rem;
+      text-align: center;
+      z-index: 100;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+    }
+    nav a {
+      margin: 0 15px;
+      color: #f1f5f9;
+      text-decoration: none;
+      font-weight: bold;
+      transition: color 0.3s;
+    }
+    nav a:hover {color:#22d3ee;}
+
+    /* Sections */
+    section {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 2rem;
+      background: #1e293b;
+      border-radius: 15px;
+      box-shadow: 0 0 20px rgba(0,0,0,0.5);
+      animation: fadeUp 1s ease;
+    }
+    section h2 {
+      text-align: center;
+      margin-bottom: 1rem;
+      font-size: 2rem;
+      color: #22d3ee;
+    }
+    section p {
+      color: #cbd5e1;
+      text-align: justify;
+    }
+    @keyframes fadeUp {
+      from {opacity:0; transform: translateY(40px);}
+      to {opacity:1; transform: translateY(0);}
+    }
+
+    /* Button */
+    .btn {
+      display: inline-block;
+      margin-top: 1rem;
+      padding: 0.8rem 1.6rem;
+      border-radius: 30px;
+      background: #22d3ee;
+      color: #0f172a;
+      font-weight: bold;
+      text-decoration: none;
+      transition: all 0.3s;
+    }
+    .btn:hover {background:#0ea5e9;color:#fff;}
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 1.5rem;
+      background: #0f172a;
+      color: #94a3b8;
+      margin-top: 3rem;
+    }
+
+    /* Responsive */
+    @media(max-width:768px){
+      header h1 {font-size:2rem;}
+      section {margin:1rem;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Hero -->
+  <header>
+    <img src="profile.jpg" alt="Muddesr Khan">
+    <h1>MUDDESRKHAN</h1>
+    <p>Researcher • Data Storyteller • Future Innovator</p>
+  </header>
+
+  <!-- Navbar -->
+  <nav>
+    <a href="#about">About</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
+
+  <!-- About -->
+  <section id="about">
+    <h2>About Me</h2>
+    <p>
+      Hi, I am <b>Muddesr Khan</b>. I am passionate about research, data-driven insights,
+      and storytelling. My goal is to present complex topics in simple, impactful ways
+      and contribute to knowledge that helps society grow.
+    </p>
+  </section>
+
+  <!-- Projects -->
+  <section id="projects">
+    <h2>Projects</h2>
+    <p>📌 Excess Population and Economic Development: India & China</p>
+    <p>📌 Impact of Melting Glaciers on South Asia</p>
+    <p>📌 Future Population Projections (2025–2050)</p>
+    <a href="Excess_Population_Research_Paper.docx" class="btn">📄 Download Research Paper</a>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <h2>Contact</h2>
+    <p>📧 Email: muddesrkhanx@example.com</p>
+    <p>💻 GitHub: <a href="https://github.com/muddesrkhanx" target="_blank">github.com/muddesrkhanx</a></p>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 MUDDESRKHAN | All Rights Reserved</p>
+  </footer>
+
+</body>
+</html>
