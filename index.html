@@ -1,173 +1,221 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>MUDDESRKHAN | Portfolio</title><img src="profile.jpg" alt="Muddesr Khan">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>MUDDESRKHAN | Portfolio<img src="profile.jpg" alt="Muddesr Khan">
+    >
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <!-- Font Awesome -->
+  <script src="https://kit.fontawesome.com/4a2f1a6f8a.js" crossorigin="anonymous"></script>
+
   <style>
-    /* Reset + Fonts */
-    * {margin:0;padding:0;box-sizing:border-box;}
+    * { margin:0; padding:0; box-sizing: border-box; }
     body {
       font-family: 'Poppins', sans-serif;
-      background: #0f172a;
+      background: linear-gradient(135deg, #0f2027, #203a43, #2c5364);
       color: #f1f5f9;
       line-height: 1.6;
     }
 
-    /* Header */
+    /* HERO SECTION */
     header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
-      background: linear-gradient(135deg, #0f172a, #1e293b);
       text-align: center;
+      padding: 4rem 1rem 2rem;
     }
     header img {
       width: 160px;
       height: 160px;
       border-radius: 50%;
-      border: 4px solid #22d3ee;
-      box-shadow: 0 0 25px #22d3ee;
-      animation: float 3s ease-in-out infinite;
-    }
-    @keyframes float {
-      0%,100% {transform: translateY(0);}
-      50% {transform: translateY(-12px);}
+      border: 4px solid #00c6ff;
+      box-shadow: 0 0 25px #00c6ff;
+      animation: bounce 3s infinite;
     }
     header h1 {
       margin-top: 1rem;
-      font-size: 3rem;
-      color: #22d3ee;
-      animation: fadeIn 2s ease-in-out;
+      font-size: 2.8rem;
+      font-weight: 700;
+      color: #00c6ff;
     }
     header p {
       font-size: 1.2rem;
-      color: #94a3b8;
+      opacity: 0.8;
     }
-    @keyframes fadeIn {
-      from {opacity:0; transform: translateY(20px);}
-      to {opacity:1; transform: translateY(0);}
+    .socials {
+      margin-top: 1rem;
     }
+    .socials a {
+      margin: 0 10px;
+      font-size: 1.5rem;
+      color: #00c6ff;
+      transition: all 0.3s ease;
+    }
+    .socials a:hover { color:#fff; transform: scale(1.2); }
 
-    /* Navigation */
     nav {
-      position: sticky;
-      top: 0;
-      background: #1e293b;
-      padding: 1rem;
-      text-align: center;
-      z-index: 100;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.4);
+      margin-top: 1.5rem;
     }
     nav a {
-      margin: 0 15px;
-      color: #f1f5f9;
       text-decoration: none;
-      font-weight: bold;
+      color: #fff;
+      margin: 0 15px;
+      font-weight: 500;
       transition: color 0.3s;
     }
-    nav a:hover {color:#22d3ee;}
+    nav a:hover { color: #00c6ff; }
 
-    /* Sections */
+    /* SECTIONS */
     section {
       max-width: 1000px;
       margin: 2rem auto;
       padding: 2rem;
-      background: #1e293b;
+      background: rgba(255,255,255,0.05);
       border-radius: 15px;
-      box-shadow: 0 0 20px rgba(0,0,0,0.5);
-      animation: fadeUp 1s ease;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.5);
+      animation: fadeIn 1.2s ease;
     }
     section h2 {
       text-align: center;
-      margin-bottom: 1rem;
+      color: #00c6ff;
+      margin-bottom: 1.5rem;
       font-size: 2rem;
-      color: #22d3ee;
-    }
-    section p {
-      color: #cbd5e1;
-      text-align: justify;
-    }
-    @keyframes fadeUp {
-      from {opacity:0; transform: translateY(40px);}
-      to {opacity:1; transform: translateY(0);}
     }
 
-    /* Button */
-    .btn {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.8rem 1.6rem;
-      border-radius: 30px;
-      background: #22d3ee;
-      color: #0f172a;
-      font-weight: bold;
-      text-decoration: none;
-      transition: all 0.3s;
+    /* SKILLS */
+    .skill {
+      margin: 1rem 0;
     }
-    .btn:hover {background:#0ea5e9;color:#fff;}
+    .skill-name {
+      font-weight: 500;
+      margin-bottom: 5px;
+    }
+    .progress {
+      background: #1e293b;
+      border-radius: 20px;
+      overflow: hidden;
+    }
+    .progress-bar {
+      height: 12px;
+      border-radius: 20px;
+      background: linear-gradient(90deg, #00c6ff, #0072ff);
+    }
 
-    /* Footer */
+    /* EDUCATION */
+    .edu-item {
+      margin: 1rem 0;
+      padding-left: 1rem;
+      border-left: 3px solid #00c6ff;
+    }
+
+    /* FOOTER */
     footer {
       text-align: center;
       padding: 1.5rem;
-      background: #0f172a;
-      color: #94a3b8;
-      margin-top: 3rem;
+      background: rgba(0,0,0,0.6);
+      border-top: 3px solid #00c6ff;
+      margin-top: 2rem;
+      font-size: 0.9rem;
     }
 
-    /* Responsive */
-    @media(max-width:768px){
-      header h1 {font-size:2rem;}
-      section {margin:1rem;}
+    /* ANIMATIONS */
+    @keyframes bounce {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-10px); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    /* RESPONSIVE */
+    @media (max-width:768px){
+      header h1 { font-size: 2rem; }
+      section { margin:1rem; padding:1.5rem; }
     }
   </style>
 </head>
 <body>
 
-  <!-- Hero -->
+  <!-- HERO -->
   <header>
-    <img src="profile.jpg" alt="Muddesr Khan">
+    <img src="profile.jpg" alt="MUDDESRKHAN">
     <h1>MUDDESRKHAN</h1>
-    <p>Researcher • Data Storyteller • Future Innovator</p>
+    <p>Researcher • Data Enthusiast • Storyteller</p>
+    <div class="socials">
+      <a href="https://www.instagram.com/xkhann__?igsh=NGJicWEwOTFkOW5u" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.facebook.com/share/1At7th84KD/" target="_blank"><i class="fab fa-facebook"></i></a>
+      <a href="https://www.linkedin.com/in/muddesr-khan-800258350" target="_blank"><i class="fab fa-linkedin"></i></a>
+      <a href="https://x.com/MuddesrK11324?t=MP8zJ4Q9W1KeIvXxVQYVsA&s=09" target="_blank"><i class="fab fa-twitter"></i></a>
+      <a href="https://github.com/muddesrkhanx" target="_blank"><i class="fab fa-github"></i></a>
+    </div>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#projects">Projects</a>
+      <a href="#education">Education</a>
+      <a href="#contact">Contact</a>
+    </nav>
   </header>
 
-  <!-- Navbar -->
-  <nav>
-    <a href="#about">About</a>
-    <a href="#projects">Projects</a>
-    <a href="#contact">Contact</a>
-  </nav>
-
-  <!-- About -->
+  <!-- ABOUT -->
   <section id="about">
     <h2>About Me</h2>
     <p>
-      Hi, I am <b>Muddesr Khan</b>. I am passionate about research, data-driven insights,
-      and storytelling. My goal is to present complex topics in simple, impactful ways
-      and contribute to knowledge that helps society grow.
+      Hi, I am <b>Muddesr Khan</b>. Passionate about research, data-driven projects, and innovative solutions. 
+      I love building impactful projects that can help communities and inspire positive change.
     </p>
   </section>
 
-  <!-- Projects -->
+  <!-- SKILLS -->
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="skill">
+      <div class="skill-name">Python</div>
+      <div class="progress"><div class="progress-bar" style="width:85%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">Data Analysis</div>
+      <div class="progress"><div class="progress-bar" style="width:90%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">Research Writing</div>
+      <div class="progress"><div class="progress-bar" style="width:80%"></div></div>
+    </div>
+    <div class="skill">
+      <div class="skill-name">Communication</div>
+      <div class="progress"><div class="progress-bar" style="width:75%"></div></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
   <section id="projects">
     <h2>Projects</h2>
-    <p>📌 Excess Population and Economic Development: India & China</p>
-    <p>📌 Impact of Melting Glaciers on South Asia</p>
-    <p>📌 Future Population Projections (2025–2050)</p>
-    <a href="Excess_Population_Research_Paper.docx" class="btn">📄 Download Research Paper</a>
+    <ul>
+      <li><b>Research Paper:</b> Excess Population and Economic Development</li>
+      <li><b>Analysis:</b> Impact of Glacier Melt on South Asia</li>
+      <li><b>Comparative Study:</b> India vs China Demographics</li>
+    </ul>
   </section>
 
-  <!-- Contact -->
+  <!-- EDUCATION -->
+  <section id="education">
+    <h2>Education</h2>
+    <div class="edu-item">
+      <h3>Punyashlok Ahilyadevi Holkar Solapur University, Solapur</h3>
+      <p>K.N.B.C Kurduwadi — 2nd Year, Economics</p>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>📧 Email: muddesrkhanx@example.com</p>
-    <p>💻 GitHub: <a href="https://github.com/muddesrkhanx" target="_blank">github.com/muddesrkhanx</a></p>
+    <p>Email: <a href="mailto:comtxnxsh@exmple.com" style="color:#00c6ff;">comtxnxsh@exmple.com</a></p>
+    <p>GitHub: <a href="https://github.com/muddesrkhanx" target="_blank" style="color:#00c6ff;">github.com/muddesrkhanx</a></p>
   </section>
 
-  <!-- Footer -->
+  <!-- FOOTER -->
   <footer>
     <p>© 2025 MUDDESRKHAN | All Rights Reserved</p>
   </footer>
